@@ -1,6 +1,6 @@
 Name: ico
-Version: 1.0.1
-Release: %mkrel 4
+Version: 1.0.2
+Release: %mkrel 1
 Summary: Animate an icosahedron or other polyhedron
 Group: Development/X11
 Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
@@ -20,8 +20,7 @@ simple.
 %setup -q -n %{name}-%{version}
 
 %build
-%configure2_5x	--x-includes=%{_includedir}\
-		--x-libraries=%{_libdir}
+%configure
 
 %make
 
@@ -35,6 +34,6 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %{_bindir}/ico
-%{_mandir}/man1/ico.1x.bz2
+%{_mandir}/man1/ico.1.*
 
 
