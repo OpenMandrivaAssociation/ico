@@ -1,7 +1,7 @@
 Summary:	Animate an icosahedron or other polyhedron
 Name:		ico
 Version:	1.0.4
-Release:	4
+Release:	5
 Group:		Development/X11
 License:	MIT
 Source0:	http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
