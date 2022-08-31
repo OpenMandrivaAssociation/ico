@@ -1,10 +1,10 @@
 Summary:	Animate an icosahedron or other polyhedron
 Name:		ico
-Version:	1.0.5
-Release:	3
+Version:	1.0.6
+Release:	1
 Group:		Development/X11
 License:	MIT
-Source0:	http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.xz
 
 BuildRequires:	pkgconfig(xorg-macros)
 BuildRequires:	pkgconfig(x11) >= 1.0.0
@@ -16,17 +16,16 @@ different polyhedra available; adding a new polyhedron to the program is quite
 simple.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{_bindir}/ico
-%{_mandir}/man1/ico.1.*
-
+%doc %{_mandir}/man1/ico.1.*
